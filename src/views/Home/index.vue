@@ -1,6 +1,7 @@
 <template>
   <div style="text-align: center;padding: 50px;">
     <h2>组件库首页</h2>
+    <div>仅做测试使用</div>
   </div>
 </template>
 
