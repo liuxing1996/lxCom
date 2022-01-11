@@ -1,0 +1,138 @@
+// 公共样式变量 —— scss
+// 外部项目可复制一份进行变量修改
+
+// 字体
+$commonFontFamily: DINCondensed-Bold, DINCondensed;
+$commomFontSize: 14px;
+$fineFontSize: 12px;
+
+$commomFontColor: #333333;
+$darkGrayFontCol: #666666;
+$lightGrayFontCol: #999999;
+
+// 距离
+$commonSpacing: 10px;
+$commonMargin: 12px;
+$commonPadding: 12px;
+
+// 颜色
+$light-blue: #3370FF;
+$textAndBg: #a30000;
+// 固定颜色
+$white: #FFFFFF;
+$black: #000000;
+$red: #C03639;
+$yellow: #FEC171;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$blue: #324157;
+$pink: #E65D6E;
+$panGreen: #30B08F;
+$darkGray: #666666;
+$lightGray: #999999;
+
+// 时间
+$transitionTime: 0.4s;
+$achorTransTime: 0,4s;
+
+// el-button
+$btnCol: #7f7f7f;
+$btnBgCol: #ffffff;
+$btnBdrCol: #ECECEC;
+$btnHoverCol: #6C6C6C;
+$btnHoverBgCol: #BFBFBF;
+$btnHoverBdCol: #CCCCCC;
+$primaryBtnCol: #FFFFFF;
+$primaryBtnBgCol: #A52015;
+$primaryBtnBdCol: #A52015;
+$primaryBtnHoverCol: #FFFFFF;
+$primaryBtnHoverBgCol: #B1342A;
+$primaryBtnHoverBdCol: #B1342A;
+
+// LayouGirCard 组件
+$cardBorder: none;
+$cardHeaderPadding: 24px 20px 0;
+$cardHeaderBorderBot: none;
+$cardHeaderTextAlign: left;
+$cardBodyPadding: 18px 20px;
+$cardTitleWidth: 64px;
+$cardTitleHeight: 22px;
+$cardTitleLineHeight: 22px;
+$cardTitleFontFamily: PingFangSC-Medium,PingFang SC;
+$cardTitleFontSize: 16px;
+$cardTitleFontWeight: 500;
+$cardTitleColor: rgba(51,51,51,1);
+
+// SearchTable 组件
+$linkColor: #3370FF;
+$linkHoverColor: #409eff;
+
+// SelectDialog 组件
+$wrapMinHeight: 30px;
+$wrapBorder: 1px solid #ccc;
+$wrapBorderRadius: 3px;
+$wrapTextAlign: left;
+$wrapTagsMargin: 5px;
+$wrapTagsColor: #909399;
+$wrapTagsBorderColor: #e9e9eb;
+
+// StatusConfirm 组件
+$statusConfirmNumColor: #990000;
+$scNumFontWeight: 600;
+$scTagWidth: 120px;
+$scTagColor: #666666;
+$scTagBorderColor: #d9d9d9;
+$scBarMarginTop: 15px;
+$scBarMarginRight: 6px;
+$scBarWidth: 3px;
+$scBarHeight: 20px;
+$scBarGg: #990000;
+
+// cardList模板
+$cardListFixedBtnMargin: 0;
+$cardListFixedBtnPadding: 10px;
+$cardListFixedBtnTop: 0;
+$cardListFixedBtnBottom: 0;
+$cardListFixedBtnTextAlign: right;
+
+// common模板
+$commonLastMarginBot: 0;
+$commonFixedPaddingBot: 60px;
+$commonBtnCardPadding: 10px 0;
+$commonBtnCardTextAlign: right;
+$commonFixedBtnBot: 0;
+$commonFixedBtnMarginBot: 0;
+$commonFixedBtnPadding: 10px 24px;
+$commonFixedBtnWidth: calc( 100vw - 224px );
+
+// searchList模板
+$searchListBg: #FFFFFF;
+$slTitleFontFamily: PingFangSC-Medium,PingFang SC;
+$slTitleFontSize: 16px;
+$slTitleBeforeBg: #409eff;
+$slTitleBeforeContent: "";
+$slTitleBeforeWidth: 4px;
+$slTitleBeforeHeight: 14px;
+$slTitleBeforeMarginRight: 6px;
+$slTitleBeforeBorderRadius: 2px;
+
+// treeForm模板
+$treeFormBg: #FFFFFF;
+
+// dynamic
+$dynamicInputBorderCol: #DCDFE6;
+$DIBorderCol: #DCDFE6;
+$DIHoverBorderCol: #DCDFE6;
+$DIFocusBorderCol: #DCDFE6;
+//dynamic-form-item
+$DFISubPadding: 10px;
+$DFIInputGroupWidth: 250px;
+$DFIInputGroupMarginR: 10px;
+$DFIDeleteBtnPadding: 5px 0;
+$DFIDeleteBtnFontSize: 20px;
+$DFIDeleteBtnColor: #F56C6C;
+$DFIDeleteBtnHoverColor: red;
+// dynamic-input
+$DICardHeaderHeight: 46px;
+$DICardBodyHeight: calc(100% - 46px);
+

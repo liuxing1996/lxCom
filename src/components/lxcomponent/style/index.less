@@ -1,0 +1,97 @@
+@formLabelDetailColor: rgba(0, 0, 0, .45);
+// base color
+@primaryColor: #0573E4;
+@tableTextColor: #1F2329;
+
+.pds-form-detail {
+  .el-form-item__label{
+    color: @formLabelDetailColor;
+  }
+}
+.pds-component-table {
+  // el-checkbox
+  .el-checkbox__input.is-checked .el-checkbox__inner,
+  .el-radio__input.is-checked .el-radio__inner,
+  .el-switch.is-checked .el-switch__core,
+  .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: @primaryColor;
+    border-color: @primaryColor;
+  }
+  table {
+    td {
+      .is-checked .el-checkbox__inner{
+        background-color: @primaryColor;
+        border-color: @primaryColor;
+      }
+    }
+  }
+  .pds-column-click {
+    color: @primaryColor;
+    cursor: pointer;
+    &:hover {
+      color: @primaryColor;
+    }
+  }
+  .el-table {
+    color: @tableTextColor;
+  }
+  // 操作列 more icon
+  .el-dropdown {
+    .el-button {
+      //padding-left: 0 !important;
+      .pds-el-icon-more {
+        color: @primaryColor;
+      }
+    }
+  }
+}
+
+.flex-inline-td {
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > div {
+      width: 100%;
+    }
+    .text-overflow {
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: default;
+    }
+    .el-tooltip {
+      margin-top: -1px;
+      flex: 0 0 24px;
+    }
+  }
+  &.is-left {
+    .cell {
+      justify-content: flex-start;
+    }
+  }
+}
+.td-flex-center {
+  .el-table th, .el-table td {
+    .cell {
+      display: flex;
+      align-items: center;
+    }
+    &.is-left {
+      .cell {
+        justify-content: flex-start;
+      }
+    }
+    &.is-center {
+      .cell {
+        justify-content: center;
+      }
+    }
+    &.is-right {
+      .cell {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

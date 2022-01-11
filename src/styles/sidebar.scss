@@ -1,0 +1,243 @@
+#app {
+  .main-container {
+    transition: margin-left .28s;
+    position: relative;
+    overflow: auto;
+  }
+
+  .main-container-login {
+    min-height: 100%;
+    position: relative;
+  }
+  .sidebar-container {
+    transition: width 0.28s;
+    box-shadow: 0 2px 12px 0 rgba(62, 194, 252, 0.3);
+    position: fixed;
+    font-size: 0px;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    //overflow: hidden;
+    //border-radius: 0px 25px 25px 0px;
+
+    // reset element-ui css
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+    }
+
+    .scrollbar-wrapper {
+      overflow-x: hidden !important;
+    }
+
+    .el-scrollbar__bar.is-vertical {
+      right: 0px;
+    }
+
+    .el-scrollbar {
+      height: calc(100% - 20px);
+    }
+
+    &.has-logo {
+      .el-scrollbar {
+        height: calc(100% - 20px);
+      }
+    }
+
+    .is-horizontal {
+      display: none;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .svg-icon {
+      margin-right: 16px;
+    }
+
+    .sub-el-icon {
+      margin-right: 10px;
+      margin-left: -2px;
+    }
+
+    .el-menu {
+      border: none;
+      height: 100%;
+      width: 100% !important;
+    }
+
+    // menu hover
+    .el-menu-item,
+    .el-submenu__title {
+      border-left: 4px solid transparent;
+      transition: border-color 0s, background-color 0.3s, color 0.3s;
+    }
+    .el-submenu__title, .submenu-title-noDropdown {
+      padding-left: 13px !important;
+    }
+    .nest-menu {
+      .el-menu-item {
+        padding-left: 44px !important;
+        padding-right: 14px !important;
+      }
+    }
+  }
+
+  .hideSidebar {
+    .sidebar-container {
+      width: 0 !important;
+      &.menu-collapse-hover {
+        &:hover {
+          width: 210px !important;
+        }
+      }
+    }
+    .main-container {
+      margin-left: 0;
+    }
+    .submenu-title-noDropdown {
+      position: relative;
+      .el-tooltip {
+        padding: 0 !important;
+
+        .svg-icon {
+          margin-left: 20px;
+        }
+
+        .sub-el-icon {
+          //margin-left: 11px;
+        }
+      }
+    }
+
+    .el-submenu {
+      overflow: hidden;
+      &>.el-submenu__title {
+        //padding: 0 !important;
+        .svg-icon {
+          margin-left: 20px;
+        }
+        .sub-el-icon {
+          //margin-left: 11px;
+        }
+
+        .el-submenu__icon-arrow {
+          //display: none;
+        }
+      }
+    }
+
+    .el-menu--collapse {
+      .el-submenu {
+        &>.el-submenu__title {
+          &>span {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  // mobile responsive
+  .mobile {
+    .main-container {
+      margin-left: 0px;
+    }
+
+    .sidebar-container {
+      transition: transform .28s;
+    }
+
+    &.hideSidebar {
+      .sidebar-container {
+        pointer-events: none;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+
+  .withoutAnimation {
+
+    .main-container,
+    .sidebar-container {
+      transition: none;
+    }
+  }
+}
+
+// when menu collapsed
+.el-menu--vertical {
+  &>.el-menu {
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .sub-el-icon {
+      margin-right: 12px;
+      margin-left: -2px;
+    }
+  }
+
+  .nest-menu .el-submenu>.el-submenu__title,
+  // the scroll bar appears when the subMenu is too long
+  >.el-menu--popup {
+    max-height: 100vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track-piece {
+      background: #d3dce6;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #99a9bf;
+      border-radius: 20px;
+    }
+  }
+}
+.sidebar-btn-wrap {
+  width: 18px;
+  height: 100%;
+  position: absolute;
+  right: -18px;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+.sidebar-btn {
+  width: 18px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 14px !important;
+  background-color: #56abf9;
+  //position: absolute;
+  //right: -18px;
+  //top: 50%;
+  border: solid 1px #efefef;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  i {
+    color: white;
+    font-size: 16px;
+    border-radius: 1px;
+    font-weight: 700;
+    &.icon-arrowleft {
+      border-left: solid 2px white;
+    }
+    &.icon-arrowright {
+      border-right: solid 2px white;
+    }
+
+  }
+}

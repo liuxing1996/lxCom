@@ -1,0 +1,90 @@
+
+// base color
+$primaryColor: #0573E4;
+$blue: $primaryColor;
+$light-blue: #3A71A8;
+$red: #C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+$textAndBg: #a30000;
+
+$pageBackground: #eee;
+
+// header
+$headerHeight:     48px;
+$headerBackground: linear-gradient(90deg, #0575E6 0%, #1339C9 100%);
+$headerShadow:     0px 0px 6px 2px rgba(0, 0, 0, 0.05);
+
+// header el-menu
+
+$elMenuBackground:              transparent;
+$elMenuItemColor:               white;
+$elMenuItemHoverColor:          $elMenuItemColor;
+$elMenuItemHoverBackground:     rgba(0, 0, 0, .13);
+$elMenuItemActiveBackground:    rgba(0, 0, 0, .13);
+
+// sidebar
+$menuText:                      #bfcbd9;
+$menuActiveText:                #409EFF;
+$subMenuActiveText:             #f4f4f5; // https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:                        #03172e;
+$menuHover:                     #263445;
+
+$subMenuBg:                     $menuBg;
+$subMenuHover:                  #001528;
+$sidebarBorderColor:            rgba(0, 249, 255, 0.7);
+$sidebarBg:                     linear-gradient(90deg, #189FFF 0%, #01182F 100%);
+
+// btn
+$primaryBtn:                      $primaryColor;
+$defaultBtnBorderColor:           #e7e8ea;
+$defaultBtnHoverBorderColor:      $primaryBtn;
+$defaultBtnHoverColor:            #189FFF;
+$defaultBtnHoverBackground:       #f4faff;
+
+$sideBarWidth: 210px;
+
+
+$sizeLg:   20px;
+$weightLg: 600;
+
+$formLabelColor: #1F2329;
+$formLabelDetailColor: rgba(0, 0, 0, .45);
+$formContentColor: rgba(0, 0, 0, .85);
+$themeColor: #ebdfcb;
+$mainColor: $blue;
+
+
+//element-ui.scss
+$elTableThBg:    #f8f9fa;
+$elTableThColor: #666666;
+$elCheckboxBg:   $blue;
+// el-steps-reset
+$stepsColor: #8c8c8c;
+$stepsColorSuccess:#13ce66;
+$stepsColorProcess:#ffffff;
+$stepsBgProcess:$blue;
+// font-size
+$fontSizeMini:  12px;
+// input-height
+$inputHeightMini: 28px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
+
+
+

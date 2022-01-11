@@ -1,0 +1,266 @@
+$baseLineColor:     #e3e3e3;
+
+#app {
+  .main-container, .menu-layout {
+    height: 100%;
+  }
+  .content-layout {
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+  }
+  .menu-layout {
+    display: flex;
+    flex-direction: column;
+  }
+}
+// 查询列表页面布局
+.search-panel {
+  padding: 16px 14px 6px;
+  margin: 0 24px 24px;
+  background-color: white;
+  //flex: 1;
+  -ms-flex: 0 0 auto;
+  position: relative;
+  .search-form-wrap {
+    position: relative;
+  }
+  .collapse-btn {
+    position: absolute;
+    left: 50%;
+    bottom: -19px;
+    width: 65px;
+    height: 19px;
+    margin-left: -32px;
+    background: url("../assets/home_pic/collapse-btn.png") no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    .el-icon-arrow-down, .el-icon-arrow-up {
+      margin-top: -6px;
+    }
+  }
+  .collapse-border {
+    .collapse-btn {
+      background-image: url("../assets/home_pic/collapse-btn-border.png");
+    }
+  }
+}
+.el-card {
+  .search-panel { padding-bottom: 0; }
+}
+.material {
+  .search-panel {
+    .collapse-btn {
+      bottom: -8px;
+    }
+  }
+}
+
+.table-panel {
+  padding: 0 0 10px;
+  margin: 0 24px 16px;
+  background-color: white;
+  height: calc(100% - 245px);
+  flex: auto;
+  position: relative;
+  .supplier-buttons {
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    & + .pds-component-table {
+      height: calc(100% - 48px) !important;
+    }
+  }
+  .supplier-popover-buttons {
+    padding-right: 0 !important;
+  }
+  .searchTable {
+    height: calc(100% - 48px);
+    //border-top: solid 1px #e8e8e8;
+  }
+}
+
+// 查询列表页面布局含左侧区
+.tree-panel {
+  &.tree-box {
+    //height: 100%;
+    width: auto !important;
+    flex: 0 0 250px;
+    padding: 0 !important;
+    overflow: hidden;
+    box-sizing: border-box;
+    .tree-block {
+      border-width: 0 1px 0 0 !important;
+      box-sizing: border-box;
+    }
+    & + .menu-layout {
+      width: calc(100% - 250px);
+      height: 100%;
+      background-color: white;
+      .search-panel, .table-panel {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+      .search-panel {
+        //border-bottom: solid 1px $baseLineColor
+      }
+    }
+    .tree-box {
+      height: calc(100% - 56px);
+      min-height: auto;
+      overflow: auto;
+    }
+  }
+}
+
+// 子页面内容容器
+.app-container {
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+// 寻源进度条面板
+
+.btn-inline-breadcrumb {
+  position: absolute;
+  top: -31px;
+  right: 23px;
+}
+.progress-panel {
+  height: 86px;
+  padding: 15px 24px;
+  background-color: white;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 86px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .progress-panel-left {
+    width: 424px;
+  }
+  .progress-panel-right {
+    flex: auto;
+  }
+  .progress-panel-left-list {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    &.hr-line {
+      padding-top: 8px;
+      & > span{
+        line-height: 20px;
+        & + span {
+          padding-left: 12px;
+          margin-left: 13px;
+          position: relative;
+          &:before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            margin-top: -7px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.span-h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 25px;
+}
+.sign-small {
+  margin-left: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0 6px 0 20px;
+  background: #f4f4f4;
+  border-radius: 18px;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -3px;
+  }
+}
+
+.sourcing-container {
+  margin-top: 16px;
+  height: calc(100% - 170px);
+}
+.el-tabs--card {
+  &.tabs-reset {
+    height: 100%;
+    & > .el-tabs__header {
+      margin-bottom: 0;
+      border-bottom: none;
+      .el-tabs__item {
+        font-size: 16px;
+        font-weight: 500;
+        color: #adadad;
+        height: 35px;
+        background: #f5f5f5;
+        border: none;
+        border-radius: 4px 4px 0px 0px;
+      }
+      .el-tabs__nav {
+        border: none;
+      }
+    }
+    & > .el-tabs__content {
+      height: calc(100% - 35px);
+      .el-tab-pane {
+        height: 100%;
+        overflow: auto;
+        .el-tab-pane {
+          overflow: visible;
+        }
+      }
+    }
+  }
+}
+
+.el-collapse {
+  .tab-panel-tabs {
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    & + .tab-panel-tabs {
+      margin-top: 16px;
+    }
+  }
+}
+
