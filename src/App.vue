@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     classTheme() {
-      return 'classTheme'
+      return 'classTheme123'
     }
   },
   mounted() {
